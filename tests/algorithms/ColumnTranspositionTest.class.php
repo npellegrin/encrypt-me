@@ -25,7 +25,7 @@ class ColumnTranspositionTest extends PHPUnit_Framework_TestCase {
 		
 		// RENDEZ VOUS A MIDI PLACE DE LA LIBERTE
 		$encryptedText = $algorithm->encrypt ( "RENDEZ VOUS A MIDI PLACE DE LA LIBERTE" );
-		$this->assertEquals ( "VAREI AUEED IIAES DRMLN DLZLE OCTEPB", $encryptedText );
+		$this->assertEquals ( "VAREI AUEED IIAES DRMLN DLZLE OCTEP B", $encryptedText );
 	}
 	
 	/**
@@ -35,7 +35,7 @@ class ColumnTranspositionTest extends PHPUnit_Framework_TestCase {
 		$algorithm = new ColumnTransposition ( "PERMUTATION" );
 		
 		// RENDEZ VOUS A MIDI PLACE DE LA LIBERTE
-		$decryptedText = $algorithm->decrypt ( "VAREI AUEED IIAES DRMLN DLZLE OCTEPB" );
+		$decryptedText = $algorithm->decrypt ( "VAREI AUEED IIAES DRMLN DLZLE OCTEP B" );
 		$this->assertEquals ( "RENDEZVOUSAMIDIPLACEDELALIBERTE", $decryptedText );
 	}
 }

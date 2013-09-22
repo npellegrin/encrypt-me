@@ -65,7 +65,7 @@ class ColumnTransposition implements iAlgorithm {
 		$encryptedText = implode ( $encryptedArray );
 		
 		// Group by 5
-		for($i = 5; $i < $textSize; $i += 6) {
+		for($i = 5; $i < strlen($encryptedText); $i += 6) {
 			$encryptedText = substr_replace ( $encryptedText, " ", $i, 0 );
 		}
 		
