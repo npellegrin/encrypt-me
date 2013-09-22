@@ -16,10 +16,10 @@ Usage:
 ------
 For now, only unit test are available.
 To run a test, call phpunit with the test name and the class name:
- $ cd my-workspace/encrypt-me/
- $ phpunit <test name> <test class>
+ - cd my-workspace/encrypt-me/
+ - phpunit <test name> <test class>
 
 To run all tests, a phpunit configuration file is available:
- $ cd my-workspace/encrypt-me/
- $ phpunit --configuration phpunit-config.xml
+ - cd my-workspace/encrypt-me/
+ - phpunit --configuration phpunit-config.xml
  
