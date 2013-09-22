@@ -1,0 +1,7 @@
+<phpunit backupGlobals="false" backupStaticAttributes="false">
+	<testsuites>
+		<testsuite name="AllTests">
+			<directory suffix=".php">tests/algorithms</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>

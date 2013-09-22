@@ -15,11 +15,11 @@ If you wan to run unit tests, you needs:
 Usage:
 ------
 For now, only unit test are available.
-To run tests, run the following commands:
+To run a test, call phpunit with the test name and the class name:
  $ cd my-workspace/encrypt-me/
  $ phpunit <test name> <test class>
- 
- Example:
- $ cd /home/user/workspace/encrypt-me/
- $ phpunit BlockTranspositionTest tests/algorithms/BlockTranspositionTest.class.php
+
+To run all tests, a phpunit configuration file is available:
+ $ cd my-workspace/encrypt-me/
+ $ phpunit --configuration phpunit-config.xml
  
