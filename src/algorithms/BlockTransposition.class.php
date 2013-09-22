@@ -118,7 +118,7 @@ class BlockTransposition implements iAlgorithm {
 			$code [$i] = implode ( $code [$i] );
 		}
 		
-		// Rebuild text, and cut it if extra characters
+		// Rebuild text, and cut extra characters
 		$decryptedText = implode ( $code );
 		$decryptedText = substr ( $decryptedText, 0, $textSizeOrig );
 		
