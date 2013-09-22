@@ -43,5 +43,37 @@ class AlgorithmUtils {
 		
 		return $permutation;
 	}
+	
+	/**
+	 * This function rotate the array given in parameter and returns the new array.
+	 */
+	public static function rotateArray($array) {
+		// Compute size
+		$arraySize = sizeof ( $array );
+		
+		// Create the new array
+		$newArray = Array ();
+		for($a = 0; $a < $arraySize; $a ++) {
+			$newArray [$a] = Array ();
+		}
+		
+		// Rotate
+		for($a = 0; $a < $arraySize; $a ++) {
+			foreach ( $array [$a] as $value ) {
+				// Append values
+				array_push ( $newArray [$value], $arraySize - 1 - $a );
+			}
+			// Remove value read
+			unset ( $value );
+		}
+		
+		// Sort arrays
+		for($a = 0; $a < $arraySize; $a ++) {
+			sort ( $newArray [$a] );
+		}
+		
+		// End
+		return $newArray;
+	}
 }
 ?>
