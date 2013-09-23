@@ -22,7 +22,7 @@ class AtbashTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testEncrypt() {
 		$algorithm = new Atbash ();
-		$encryptedText = $algorithm->encrypt ( "RENDEZ VOUS A MIDI PLACE DE LA LIBERTE" );
+		$encryptedText = $algorithm->decrypt( "RENDEZ VOUS A MIDI PLACE DE LA LIBERTE" );
 		$this->assertEquals ( "IVMWVA ELFH Z NRWR KOZXV WV OZ ORYVIGV", $encryptedText );
 	}
 	

@@ -22,7 +22,7 @@ class AtbahTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testEncrypt() {
 		$algorithm = new Atbah ();
-		$encryptedText = $algorithm->encrypt ( "RENDEZ VOUS A MIDI PLACE DE LA LIBERTE" );
+		$encryptedText = $algorithm->decrypt ( "RENDEZ VOUS A MIDI PLACE DE LA LIBERTE" );
 		$this->assertEquals ( "JNEFNS WMXZ I OAFA LPIGN FN PI PAHNJYN", $encryptedText );
 	}
 	

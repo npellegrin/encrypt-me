@@ -22,7 +22,7 @@ class AlbamTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testEncrypt() {
 		$algorithm = new Albam ();
-		$encryptedText = $algorithm->encrypt ( "RENDEZ VOUS A MIDI PLACE DE LA LIBERTE" );
+		$encryptedText = $algorithm->decrypt ( "RENDEZ VOUS A MIDI PLACE DE LA LIBERTE" );
 		$this->assertEquals ( "ERAQRM IBHF N ZVQV CYNPR QR YN YVOREGR", $encryptedText );
 	}
 	
