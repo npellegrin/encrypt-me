@@ -24,6 +24,14 @@ class Cleaner {
 	}
 	
 	/**
+	 * This function keeps [0-9].
+	 */
+	public static function prepareNumberWithSpace($number) {
+		$filter = " 0123456789\r\n";
+		return self::filter ( $filter, $number );
+	}
+	
+	/**
 	 * This function removes the end of lines in the input (\n and \r).
 	 */
 	public static function removeEOL($text) {
