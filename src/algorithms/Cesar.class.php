@@ -6,7 +6,7 @@ require_once 'src/utilities/AlgorithmUtils.class.php';
 /**
  * This class can perform a block transposition with a given key.
  */
-class CesarSubstitution implements iAlgorithm {
+class Cesar implements iAlgorithm {
 	private $key;
 	
 	/**
