@@ -110,32 +110,32 @@ class Playfair implements iAlgorithm {
 		// Compute size
 		$textSize = strlen ( $text );
 		
-		/* Ajoute une lettre si ce n'est pas un nombre pair (mais à priori on nous a envoyé ce qu'il faut) */
+		// Add a letter if the character count is not peer
 		if ($textSize % 2) {
 			$text .= $alphabet {rand ( 0, 25 )};
 			$textSize ++;
 		}
 		
-		/* Code la phrase */
+		// Decrypt
 		$decryptedText = "";
 		for($i = 0; $i < $textSize; $i += 2) {
-			/* Calcule les coordonénes des lettres */
+			// Compute coords
 			$x1 = strpos ( $this->grille, $text {$i} ) % 5;
 			$y1 = intval ( strpos ( $this->grille, $text {$i} ) / 5 );
 			$x2 = strpos ( $this->grille, $text {$i + 1} ) % 5;
 			$y2 = intval ( strpos ( $this->grille, $text {$i + 1} ) / 5 );
 			
-			/* Substitue en suivant la règle de Playfair */
+			// Substitution using the Playfair cipher
 			if ($y1 == $y2) {
-				/* Même ligne */
+				// Same line
 				$decryptedText .= $this->grille {5 * $y1 + (($x1 + 4) % 5)};
 				$decryptedText .= $this->grille {5 * $y2 + (($x2 + 4) % 5)};
 			} elseif ($x1 == $x2) {
-				/* Même colonne */
+				// Same column
 				$decryptedText .= $this->grille {5 * (($y1 + 4) % 5) + $x1};
 				$decryptedText .= $this->grille {5 * (($y2 + 4) % 5) + $x2};
 			} else {
-				/* Ligne et colonne différentes */
+				// Line and column are different
 				$decryptedText .= $this->grille {(5 * $y1 + $x2)};
 				$decryptedText .= $this->grille {(5 * $y2 + $x1)};
 			}
