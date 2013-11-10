@@ -1,7 +1,6 @@
 <?php
 require_once 'src/algorithms/iAlgorithm.class.php';
 require_once 'src/utilities/Cleaner.class.php';
-require_once 'src/utilities/AlgorithmUtils.class.php';
 
 /**
  * This class can perform a block transposition with a given key.
