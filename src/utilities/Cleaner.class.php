@@ -24,11 +24,20 @@ class Cleaner {
 	}
 	
 	/**
-	 * This function keeps [0-9].
+	 * This function keeps [0-9], space and \n or \r.
 	 */
 	public static function prepareNumberWithSpace($number) {
 		$filter = " 0123456789\r\n";
 		return self::filter ( $filter, $number );
+	}
+
+	/**
+	 * This function keeps [0-9].
+	 */
+	public static function prepareNumber($number) {
+		$filter = "0123456789";
+		$filtered = self::filter ( $filter, strval($number) );
+		return intval($filtered);
 	}
 	
 	/**
