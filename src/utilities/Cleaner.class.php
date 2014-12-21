@@ -48,6 +48,15 @@ class Cleaner {
 		$cleaned = str_replace ( "\r", "", $cleaned );
 		return $cleaned;
 	}
+
+	/**
+	 * This function removes the space and tabs of the input.
+	 */
+	public static function removeSpaces($text) {
+		$cleaned = str_replace ( " ", "", $text );
+		$cleaned = str_replace ( "\t", "", $cleaned );
+		return $cleaned;
+	}
 	
 	/**
 	 * Filter a text, keeping only the character in filter.
