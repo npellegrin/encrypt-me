@@ -218,5 +218,33 @@ class AlgorithmUtils {
 		// End
 		return $result;
 	}
+	
+	/**
+	 * Recursive search in array (as array_find, but for n-dimentional arrays).
+	 */
+	public static function array_search_rec($needle, $haystack) {
+		foreach ( $haystack as $key => $value ) {
+			// End of recursion
+			if ($needle === $value) {
+				return array (
+						$key 
+				);
+			}
+			
+			// Search over
+			if (is_array ( $value )) {
+				$found = AlgorithmUtils::array_search_rec ( $needle, $value );
+				if ($found !== false) {
+					// Keys found
+					return array_merge ( array (
+							$key 
+					), $found );
+				}
+			}
+		}
+		
+		// Not found
+		return false;
+	}
 }
 ?>
