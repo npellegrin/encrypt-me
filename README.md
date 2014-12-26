@@ -8,13 +8,13 @@ Requirements
 The minimal requirements are:
  - Php 5.3 or higher
 
-If you wan to run unit tests, you needs:
+If you want to run unit tests, you needs:
  - Pear
  - PHPUnit with its dependencies
 
 Usage:
 ------
-For now, only unit test are available.
+For now, only unit tests are available.
 To run a test, call phpunit with the test name and the class name:
  - cd my-workspace/encrypt-me/
  - phpunit <test name> <test class>
